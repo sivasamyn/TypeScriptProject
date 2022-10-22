@@ -1,9 +1,10 @@
 //const Offices = require("../controllers/locations.controllers.js")
 
+import { Application } from 'express';
 import * as LocationOffices from '../controllers/locations.controllers';
 
 
-module.exports = (app:any) => {
+module.exports = (app:Application) => {
   const Offices:any = LocationOffices;
 
   var router = require("express").Router();

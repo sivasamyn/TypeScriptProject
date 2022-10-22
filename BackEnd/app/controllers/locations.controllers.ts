@@ -1,10 +1,11 @@
 //const db = require("../models");
 import * as db from '../models';
+import { Request, Response, NextFunction } from 'express';
 
 const Offices:any = db;
 
 // Create a New Office
-exports.create = (req:any, res:any) => {
+exports.create = (req:Request, res:Response) => {
   if (!req.body.address) {
     res.status(400).send({ message: "You must include an address" });
     return;
@@ -33,14 +34,14 @@ exports.create = (req:any, res:any) => {
 };
 
 // Find all Offices in Database
-exports.findAll = (req:any, res:any) => {
-  const address:string = req.query.address;
+exports.findAll = (req:Request, res:Response) => {
+  const address:any = req.query.address;
   var condition = address
     ? { address: { $regex: new RegExp(address), $options: "i" } }
     : {};
 
     Offices.find(condition)
-    .then((data:any) => {
+    .then((data:object) => {
       res.send(data);
     })
     .catch((err:any) => {

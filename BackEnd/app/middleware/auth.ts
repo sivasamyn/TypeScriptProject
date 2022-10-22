@@ -5,10 +5,11 @@
 import * as jwt from 'jsonwebtoken';
 import * as SECRET_KEY1 from '../../config';
 import { UnauthorizedError } from '../../expressError';
+import { Request, Response, NextFunction } from 'express';
 
 
 const SECRET_KEY:any = SECRET_KEY1;
-export function authenticateJWT(req:any, res:any, next:any) {
+export function authenticateJWT(req:Request, res:Response, next:NextFunction) {
   try {
     const authHeader:any = req.headers && req.headers.authorization;
     if (authHeader) {
@@ -21,7 +22,7 @@ export function authenticateJWT(req:any, res:any, next:any) {
   }
 }
 
-export function ensureLoggedIn(req:any, res:any, next:any) {
+export function ensureLoggedIn(req:Request, res:Response, next:NextFunction) {
   try {
     if (!res.locals.user) throw new UnauthorizedError();
     return next();
@@ -30,7 +31,7 @@ export function ensureLoggedIn(req:any, res:any, next:any) {
   }
 }
 
-export function ensureAdmin(req:any, res:any, next:any) {
+export function ensureAdmin(req:Request, res:Response, next:NextFunction) {
   try {
     if (!res.locals.user || !res.locals.user.isAdmin) {
       throw new UnauthorizedError();
@@ -41,7 +42,7 @@ export function ensureAdmin(req:any, res:any, next:any) {
   }
 }
 
-export function ensureCorrectUserOrAdmin(req:any, res:any, next:any) {
+export function ensureCorrectUserOrAdmin(req:Request, res:Response, next:NextFunction) {
   try {
     const user:any = res.locals.user;
     if (!(user && (user.isAdmin || user.username === req.params.username))) {

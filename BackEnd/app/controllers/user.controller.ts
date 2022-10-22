@@ -24,11 +24,12 @@ import userEditSchema from '../schemas/userEdit.json';
 import * as BCRYPT_WORK_FACTOR1  from '../../config';
 import * as jsonschema from 'jsonschema';
 import { createToken } from '../helpers/token';
+import { Request, Response, NextFunction } from 'express';
 
 const BCRYPT_WORK_FACTOR:any = BCRYPT_WORK_FACTOR1;
 const Users:any = db;
 //Create a New User
-exports.create = async (req:any, res:any, next:any) => {
+exports.create = async (req:Request, res:Response, next:NextFunction) => {
 
   const validator = jsonschema.validate(req.body, userRegisterSchema);
   if (!validator.valid) {
@@ -59,7 +60,7 @@ exports.create = async (req:any, res:any, next:any) => {
     });
 };
 
-exports.authenticate = async (req:any, res:any, next:any) => {
+exports.authenticate = async (req:Request, res:Response, next:NextFunction) => {
   const validator = jsonschema.validate(req.body, userAuthSchema);
   if (!validator.valid) {
     const errs:any = validator.errors.map((e:any) => e.stack);
@@ -85,14 +86,14 @@ exports.authenticate = async (req:any, res:any, next:any) => {
   next(new NotFoundError());
 };
 
-exports.getAllUsers = async (req:any, res:any, next:any) => {
+exports.getAllUsers = async (req:Request, res:Response, next:NextFunction) => {
   let users:any = await Users.find();
 
   return res.json({ users });
 };
 
-exports.getAUser = async (req:any, res:any, next:any) => {
-  let email:object = req.params.email;
+exports.getAUser = async (req:Request, res:Response, next:NextFunction) => {
+  let email:string = req.params.email;
 
   let user = await Users.find({
     email: email,
@@ -105,7 +106,7 @@ exports.getAUser = async (req:any, res:any, next:any) => {
   next(new NotFoundError());
 };
 
-exports.updateAUser = async (req:any, res:any, next:any) => {
+exports.updateAUser = async (req:Request, res:Response, next:NextFunction) => {
   const validator:any = jsonschema.validate(req.body, userEditSchema);
 
   if (!validator.valid) {
@@ -124,7 +125,7 @@ exports.updateAUser = async (req:any, res:any, next:any) => {
       password: hashedPassword,
     }
   )
-    .then((data:any) => {
+    .then((data:object) => {
       res.status(201).send({ message: "user updated" });
     })
     .catch((err:any) => {
@@ -136,8 +137,8 @@ exports.updateAUser = async (req:any, res:any, next:any) => {
   next(new NotFoundError());
 };
 
-exports.removeAUser = async (req:any, res:any, next:any) => {
-  await Users.deleteOne({ email: req.params.email }).then((data:any) => {
+exports.removeAUser = async (req:Request, res:Response, next:NextFunction) => {
+  await Users.deleteOne({ email: req.params.email }).then((data:object) => {
     res.status(200).send({ message: "sucessfully deleted" });
   });
 };

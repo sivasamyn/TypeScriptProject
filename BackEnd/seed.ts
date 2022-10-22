@@ -7,15 +7,18 @@
 // const db = require("./app/models");
 // const Offices = db.Offices;
 
-const csv = require("csv-parser");
-const fs = require("fs");
+import * as csv from 'csv-parser';
+import * as fs from 'fs';
+//import * as MongoClient from 'mongoose';
 const MongoClient = require("mongodb").MongoClient;
-const url = "mongodb://localhost:27017/";
-const bcrypt = require("bcrypt");
-const { BCRYPT_WORK_FACTOR } = require("./config.js");
-const db = require("./app/models");
+import * as bcrypt from 'bcrypt';
+import  * as BCRYPT_WORK_FACTOR  from './config';
+import * as db from './app/models';
 const Offices = db.Offices;
+import { Request, Response, NextFunction } from 'express';
 
+
+const url:string = "mongodb://localhost:27017/";
 //Read in office location data
 fs.createReadStream("./seed_data/neudesicoffice_data.csv")
   .pipe(csv())
@@ -27,7 +30,7 @@ fs.createReadStream("./seed_data/neudesicoffice_data.csv")
       var OfficesToInsert = new Offices(row);
 
       // console.log(OfficesToInsert);
-      dbo.collection("offices").insertOne(OfficesToInsert, function (err:any, res:any) {
+      dbo.collection("offices").insertOne(OfficesToInsert, function (err:any, res:Response) {
         if (err) throw err;
         console.log("1 document inserted");
         db.close();
@@ -52,7 +55,7 @@ fs.createReadStream("./seed_data/user_data.csv")
       console.log("User to insert: ");
       console.log(myObj);
 
-      dbo.collection("users").insertOne(myObj, function (err:any, res:any) {
+      dbo.collection("users").insertOne(myObj, function (err:any, res:Response) {
         if (err) throw err;
         console.log("1 document inserted");
         db.close();

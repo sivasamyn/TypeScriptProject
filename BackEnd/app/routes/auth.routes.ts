@@ -1,8 +1,9 @@
 //const users = require("../controllers/user.controller.js");
 
+import { Application } from 'express';
 import * as usersController from '../controllers/user.controller';
 
-module.exports = (app:any) => {
+module.exports = (app:Application) => {
 
   const users:any = usersController;
   var router:any = require("express").Router();

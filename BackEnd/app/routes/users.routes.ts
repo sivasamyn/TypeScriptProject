@@ -1,7 +1,8 @@
 // const { ensureCorrectUserOrAdmin, ensureAdmin } = require("../middleware/auth");
+import { Application } from 'express';
 import { ensureCorrectUserOrAdmin, ensureAdmin } from '../middleware/auth';
 
-module.exports = (app:any) => {
+module.exports = (app:Application) => {
   const users = require("../controllers/user.controller.js");
 
   var router = require("express").Router();
