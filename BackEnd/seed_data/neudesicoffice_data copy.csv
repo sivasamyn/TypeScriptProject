@@ -1,0 +1,31 @@
+address,city,stateOrProvince,zipOrPostalCode,status,locationUrl,empolyee
+Kalyani Platina Tech Park,Bengaluru,Karnataka,560037,Active,https://www.google.com/maps/place/Neudesic/@12.968467,77.717212,16z/data=!4m5!3m4!1s0x0:0xe9899b8d34cea988!8m2!3d12.968467!4d77.717212?hl=en-US, 500
+Jyothi pinnacle whitefields,Hyderabad,Hyderabad,500081,Active,https://www.google.com/maps/place/Neudesic+Technologies+Private+Limited/@17.458098,78.369021,16z/data=!4m5!3m4!1s0x0:0xaff7c585aff498aa!8m2!3d17.4580939!4d78.3690207?hl=en-US, 700
+Carnival Info Park,Kakkanad,Kochi,682042,Active,https://www.google.com/maps/place/Neudesic+Technologies+Pvt.Ltd./@10.014113,76.363507,16z/data=!4m5!3m4!1s0x0:0xd705158c4a9d967e!8m2!3d10.0141383!4d76.3635837?hl=en, 500
+Phoenix AZ,Mill Avenue,Tempe,85281,Active,https://www.google.com/maps/place/100+S+Mill+Ave+%23910,+Tempe,+AZ+85281/@33.428898,-111.941009,16z/data=!4m5!3m4!1s0x872b09dc97c12a13:0x950cfbfa50752e20!8m2!3d33.428898!4d-111.9410095?hl=en-US, 600
+Seattle WA,Suite,Seattle,WA 98104,Active,https://www.google.com/maps/place/Flowplay+Inc/@47.6046,-122.337494,16z/data=!4m5!3m4!1s0x54906aa54e525afd:0xf689bd014e291b73!8m2!3d47.6045074!4d-122.3372307?hl=en-US, 280
+842 West Sam Houston Pkwy N,Suite 560,Houston,TX 77024,Active,https://www.google.com/maps/place/Neudesic+Technologies+Private+Limited/@17.458098,78.369021,16z/data=!4m5!3m4!1s0x0:0xaff7c585aff498aa!8m2!3d17.4580939!4d78.3690207?hl=en-US, 550
+33 E 33rd Street,Suite 1000,New York,NY 10016,Active,https://www.neudesic.com/about/contact/, 500
+200 Spectrum Center Drive,Suite 2000,Irvine,CA 92618,Active,https://www.google.com/maps/place/Neudesic/@33.65272,-117.747902,16z/data=!4m5!3m4!1s0x0:0x45b3ac656d363ccc!8m2!3d33.65272!4d-117.747902?hl=en-US, 400
+
+
+address,city,stateOrProvince,zipOrPostalCode,status,locationUrl,empolyee
+Kalyani Platina Tech Park,Bengaluru,Karnataka,560037,Active,https://www.google.com/maps/place/Neudesic/@12.968467,77.717212,16z/data=!4m5!3m4!1s0x0:0xe9899b8d34cea988!8m2!3d12.968467!4d77.717212?hl=en-US, 500
+Jyothi pinnacle whitefields,Hyderabad,Hyderabad,500081,Active,https://www.google.com/maps/place/Neudesic+Technologies+Private+Limited/@17.458098,78.369021,16z/data=!4m5!3m4!1s0x0:0xaff7c585aff498aa!8m2!3d17.4580939!4d78.3690207?hl=en-US, 700
+Carnival Info Park,Kakkanad,Kochi,682042,Active,https://www.google.com/maps/place/Neudesic+Technologies+Pvt.Ltd./@10.014113,76.363507,16z/data=!4m5!3m4!1s0x0:0xd705158c4a9d967e!8m2!3d10.0141383!4d76.3635837?hl=en, 500
+Phoenix AZ,Mill Avenue,Tempe,85281,Active,https://www.google.com/maps/place/100+S+Mill+Ave+%23910,+Tempe,+AZ+85281/@33.428898,-111.941009,16z/data=!4m5!3m4!1s0x872b09dc97c12a13:0x950cfbfa50752e20!8m2!3d33.428898!4d-111.9410095?hl=en-US, 600
+Seattle WA,Suite,Seattle,WA 98104,Active,https://www.google.com/maps/place/Flowplay+Inc/@47.6046,-122.337494,16z/data=!4m5!3m4!1s0x54906aa54e525afd:0xf689bd014e291b73!8m2!3d47.6045074!4d-122.3372307?hl=en-US, 280
+842 West Sam Houston Pkwy N,Suite 560,Houston,TX 77024,Active,https://www.google.com/maps/place/Neudesic+Technologies+Private+Limited/@17.458098,78.369021,16z/data=!4m5!3m4!1s0x0:0xaff7c585aff498aa!8m2!3d17.4580939!4d78.3690207?hl=en-US, 550
+33 E 33rd Street,Suite 1000,New York,NY 10016,Active,https://www.neudesic.com/about/contact/, 500
+200 Spectrum Center Drive,Suite 2000,Irvine,CA 92618,Active,https://www.google.com/maps/place/Neudesic/@33.65272,-117.747902,16z/data=!4m5!3m4!1s0x0:0x45b3ac656d363ccc!8m2!3d33.65272!4d-117.747902?hl=en-US, 400
+
+
+address,telephone,city,stateOrProvince,zipOrPostalCode,status,locationUrl,empolyee
+Kalyani Platina Tech Park,Bengaluru,Karnataka,560037,Active,https://www.neudesic.com/about/contact/, 500
+Jyothi pinnacle whitefields,Hyderabad,Hyderabad,500081,Active,https://www.neudesic.com/about/contact/, 700
+Carnival Info Park,Kakkanad,Kochi,682042,Active,https://www.neudesic.com/about/contact/, 500
+Phoenix AZ,Mill Avenue,Tempe,85281,Active,https://www.neudesic.com/about/contact/, 600
+Seattle WA,Suite,Seattle,WA 98104,Active,https://www.neudesic.com/about/contact/, 280
+842 West Sam Houston Pkwy N,Suite 560,Houston,TX 77024,Active,https://www.neudesic.com/about/contact/, 550
+33 E 33rd Street,Suite 1000,New York,NY 10016,Active,https://www.neudesic.com/about/contact/, 500
+200 Spectrum Center Drive,Suite 2000,Irvine,CA 92618,Active,https://www.neudesic.com/about/contact/, 400
