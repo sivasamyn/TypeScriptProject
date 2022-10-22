@@ -6,7 +6,8 @@
 // const db = require("./db");
 // const app = express();
 
-import * as express from 'express';
+import * as express  from 'express';
+import { Request, Response, NextFunction } from 'express';
 import * as cors from 'cors';
 import { NotFoundError } from './expressError';
 import { authenticateJWT } from './app/middleware/auth';
@@ -30,14 +31,14 @@ require("./app/routes/locations.routes")(app);
 require("./app/routes/users.routes")(app);
 
 // handle 404 errors
-app.use(function (req:any, res:any, next:any) {
+app.use(function (req:Request, res:Response, next:NextFunction) {
   return next(new NotFoundError());
 });
 
 // Generic Error Handler
-app.use(function (err:any, req:any, res:any, next:any) {
+app.use(function (err:any, req:Request, res:Response, next:NextFunction) {
   if (process.env.NODE_ENV !== "test") console.error(err.stack);
-  const status:string = err.status || 500;
+  const status:any = err.status || 500;
   const message:string = err.message;
 
   return res.status(status).json({
